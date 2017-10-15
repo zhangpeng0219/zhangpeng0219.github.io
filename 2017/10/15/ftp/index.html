@@ -60,7 +60,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
+	                        <a class="category-link" href="/categories/服务器/">服务器</a>
 	                    </ul>
 	        </li>
 	        
@@ -99,7 +99,7 @@
             <!-- icons 图标   -->
 			<ul class="icons">
 		            
-		                <li><a href="https://zhangpeng0219.github.io/" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		                <li><a href="https://github.com/zhangpeng0219" class="icon fa-github"><span class="label">GitHub</span></a></li>
 		            
 		            
 		            
@@ -108,12 +108,23 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/ftp.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Ubuntu搭建FTP服务</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>title: hello<br>date: 2015-07-01 22:37:23<br>　categories:<br>　　日志<br>　　　　二级目录<br>tags:<br>　　hello<br>摘要:<br>正文:欢迎进入sharecloud博客</p>
+                <hr>
+<p>一、Ubuntu安装ftp服务<br>1、首先用命令检查是否安装了vsftpd</p>
+<h1 id="vsftpd-version"><a href="#vsftpd-version" class="headerlink" title="vsftpd -version"></a>vsftpd -version</h1><p>如果未安装用一下命令安装：</p>
+<h1 id="sudo-apt-get-install-vsftpd"><a href="#sudo-apt-get-install-vsftpd" class="headerlink" title="sudo apt-get install vsftpd"></a>sudo apt-get install vsftpd</h1><p>安装完成后，再次输入vsftpd -version命令查看是否安装成功</p>
+<p>2、新建一个文件夹用于FTP的工作目录</p>
+<h1 id="mkdir-home-ftp"><a href="#mkdir-home-ftp" class="headerlink" title="mkdir /home/ftp"></a>mkdir /home/ftp</h1><p>3、新建FTP用户并设置密码以及工作目录<br>ftpname为你为该ftp创建的用户名：</p>
+<h1 id="sudo-useradd-d-home-ftp-s-bin-bash-ftpname"><a href="#sudo-useradd-d-home-ftp-s-bin-bash-ftpname" class="headerlink" title="sudo useradd -d /home/ftp -s /bin/bash ftpname"></a>sudo useradd -d /home/ftp -s /bin/bash ftpname</h1><p>为新建的用户设置密码：</p>
+<h1 id="passwd-ftpname"><a href="#passwd-ftpname" class="headerlink" title="passwd ftpname"></a>passwd ftpname</h1><p>为ftp目录赋予新建用户的权限：</p>
+<h1 id="chown-ftpname-home-ftp"><a href="#chown-ftpname-home-ftp" class="headerlink" title="chown ftpname /home/ftp"></a>chown ftpname /home/ftp</h1><p>4、修改vsftpd.conf配置文件</p>
+<h1 id="vi-etc-vsftpd-conf"><a href="#vi-etc-vsftpd-conf" class="headerlink" title="vi /etc/vsftpd.conf"></a>vi /etc/vsftpd.conf</h1><p>修改以下属性：<br>anonymous_enable=NO #禁止匿名访问<br>local_enable=YES<br>write_enable =YES<br>保存返回 </p>
+<p>5、启动vsftpd服务</p>
+<h1 id="service-vsftpd-restart"><a href="#service-vsftpd-restart" class="headerlink" title="service vsftpd restart"></a>service vsftpd restart</h1><p>6、测试ftp登录连接<br>打开cmd：<br>输入ftp 172.16.102.223<br>输入用户名：ftpname<br>输入密码：123456<br>登录成功即可</p>
 
             </div>
 
@@ -176,8 +187,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://zhangpeng0219.github.io/2017/08/27/hello/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://zhangpeng0219.github.io/2017/08/27/hello/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://zhangpeng0219.github.io/2017/10/15/ftp/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://zhangpeng0219.github.io/2017/10/15/ftp/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
