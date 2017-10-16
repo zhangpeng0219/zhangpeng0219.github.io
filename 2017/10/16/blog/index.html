@@ -120,13 +120,12 @@
 <li>选择对应的windows选项然后</li>
 <li>等待安装完成<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><ul>
 <li>Node安装更加简单，还是一路”Next”,最后等待安装完成即可<br>###验证软件正确安装</li>
-<li>同时按下Win键和R键（或者点击“开始菜单”-&gt;点击“运行”）,打开运行窗口,输入“cmd”  然后输入以下命令，结果与下图相同则说明安装正确，若不正确可以卸载软件重新安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.git --version</div></pre></td></tr></table></figure>
-</li>
+<li>同时按下Win键和R键（或者点击“开始菜单”-&gt;点击“运行”）,打开运行窗口,输入“cmd”  然后输入以下命令，结果与下图相同则说明安装正确，若不正确可以卸载软件重新安装<br>1、git –version</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2.node -v</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3.npm -v</div></pre></td></tr></table></figure>
+<p>2、node -v</p>
+<p>3、npm -v  </p>
 <h3 id="申请GitHub"><a href="#申请GitHub" class="headerlink" title="申请GitHub"></a>申请GitHub</h3><ul>
 <li>点击-&gt;GitHub进入官网注册帐号</li>
 <li>按下图分别输入用户名、邮箱、密码，然后点击注册</li>
@@ -141,52 +140,53 @@
 </ul>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ul>
 <li>hexo是基于node.js的静态博客，官网也是搭建在GitHub上<br>在电脑上新建一个blog文件夹,该文件夹用于存放你的博客文件,然后右键单击选择“Git Bash”</li>
-<li><p>大家估计都有被“墙”的经历，安装hexo为了避免出现类似情况，我使用淘宝NPM镜像,输入以下命令等待安装完成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用淘宝NPM安装Hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2、$ cnpm install -g hexo-cli</div></pre></td></tr></table></figure>
-</li>
+<li>大家估计都有被“墙”的经历，安装hexo为了避免出现类似情况，我使用淘宝NPM镜像,输入以下命令等待安装完成</li>
 </ul>
-<p>与原先的npm完全一样，只是命令改为cnpm,一样等待hexo安装完成<br>出现的WARN可以不用理会<br>继续输入以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3、$ cnpm install hexo --save</div></pre></td></tr></table></figure></p>
+<p>1、npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
 <ul>
-<li>安装完成后，在输入命令，验证是否安装正确<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4、$ hexo -v</div></pre></td></tr></table></figure>
-</li>
+<li>使用淘宝NPM安装Hexo</li>
 </ul>
+<p>2、cnpm install -g hexo-cli</p>
+<p>与原先的npm完全一样，只是命令改为cnpm,一样等待hexo安装完成<br>出现的WARN可以不用理会<br>继续输入以下命令</p>
+<p>3、cnpm install hexo –save</p>
+<ul>
+<li>安装完成后，在输入命令，验证是否安装正确</li>
+</ul>
+<p>4、hexo -v</p>
 <h3 id="本地运行hexo"><a href="#本地运行hexo" class="headerlink" title="本地运行hexo"></a>本地运行hexo</h3><ul>
-<li><p>初始化hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ hexo init</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装生成器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2、$ cnpm install</div></pre></td></tr></table></figure>
-</li>
-<li><p>运行hexo,以后要在本地运行博客只要输入该命令即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3、$ hexo s -g</div></pre></td></tr></table></figure>
-</li>
+<li>初始化hexo</li>
 </ul>
+<p>1、hexo init</p>
+<ul>
+<li>安装生成器</li>
+</ul>
+<p>2、cnpm install</p>
+<ul>
+<li>运行hexo,以后要在本地运行博客只要输入该命令即可</li>
+</ul>
+<p>3、hexo s -g</p>
 <p>打开浏览器，输入localhost:4000,就可以在本地看到你的个人博客了</p>
 <ul>
 <li>停止运行<br>按住Ctrl+C键即可停止<h3 id="管理博客"><a href="#管理博客" class="headerlink" title="管理博客"></a>管理博客</h3></li>
 <li>配置信息<br>使用Sublime_Text编辑器或phpstrom等打开blog/_config.yml文件，进行配置<br>deploy:<br>  　　　type: git<br> 　　　 <span style="color:gray">zhangpeng0219改为你的github用户名</span><br> 　　　 repository: <a href="https://github.com/zhangpegn0219/zhangpeng0219.github.io.git" target="_blank" rel="external">https://github.com/zhangpegn0219/zhangpeng0219.github.io.git</a><br> 　　　 branch: master</li>
-<li>写一篇文章<br>输入创建文章命令，生成一个md文件(/blog/source/_posts/)<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ hexo new <span class="string">"hello"</span></div></pre></td></tr></table></figure>
-</li>
+<li><p>写一篇文章<br>输入创建文章命令，生成一个md文件(/blog/source/_posts/)</p>
+<h1 id="hexo-new-“hello”"><a href="#hexo-new-“hello”" class="headerlink" title="hexo new “hello”"></a>hexo new “hello”</h1></li>
 </ul>
 <p>用编辑器打开hello.md文件,编写完后保存<br>title: hello<br>date: 2015-07-01 22:37:23<br>　categories:<br>  　　日志<br>  　　　　二级目录<br>tags:<br>　　hello<br>摘要:<br>正文:</p>
 <h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3><ul>
-<li>设置git身份信息<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ git config --global user.name <span class="string">"你的用户名"</span></div></pre></td></tr></table></figure>
-</li>
+<li>设置git身份信息</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2、$ git config --global user.email <span class="string">"你的邮箱"</span></div></pre></td></tr></table></figure>
+<p>1、git config –global user.name “你的用户名”</p>
+<p>2、git config –global user.email “你的邮箱”</p>
 <ul>
-<li><p>安装hexo git插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3、$ cnpm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>发布更新博客</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4、$ hexo d -g</div></pre></td></tr></table></figure>
-</li>
+<li>安装hexo git插件</li>
 </ul>
+<p>3、cnpm install hexo-deployer-git –save</p>
+<ul>
+<li>发布更新博客</li>
+</ul>
+<p>4、hexo d -g</p>
 <p>发布时需要输入github的帐号和密码，输入密码时是看不到自己输入的内容的<br>发布成功后，访问yourname.github.io看下成果</p>
-<hr>
 <p>个人博客网址：<a href="https://zhangpeng0219.github.io/">https://zhangpeng0219.github.io/</a></p>
 
             </div>
