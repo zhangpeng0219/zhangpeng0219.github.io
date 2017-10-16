@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    ShareCloud博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">SHARECLOUD</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Linux/">Linux</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/zhangpeng0219" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/github.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >个人博客搭建-hexo+github</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <hr>
+<h3 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h3><p>系统: Window 7 64位<br>使用软件:<br>　Git v2.6.5<br>　　　[下载地址] <a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git官网</a><br>　Node.js v6.9.5<br>　　　[下载地址] <a href="https://nodejs.org/en/" target="_blank" rel="external">node.js官网</a><br>32位或64位按自己电脑的系统来选择，如果不清楚，可以直接在官网下载32位的，可以兼容64位系统<br>备注:<br>不同软件版本的安装与使用会有差异，请尽量与本教程保持一致</p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><ul>
+<li>大部分按默认安装，一路点击”Next”</li>
+<li>选择对应的windows选项然后</li>
+<li>等待安装完成<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><ul>
+<li>Node安装更加简单，还是一路”Next”,最后等待安装完成即可<br>###验证软件正确安装</li>
+<li>同时按下Win键和R键（或者点击“开始菜单”-&gt;点击“运行”）,打开运行窗口,输入“cmd”  然后输入以下命令，结果与下图相同则说明安装正确，若不正确可以卸载软件重新安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.git --version</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2.node -v</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3.npm -v</div></pre></td></tr></table></figure>
+<h3 id="申请GitHub"><a href="#申请GitHub" class="headerlink" title="申请GitHub"></a>申请GitHub</h3><ul>
+<li>点击-&gt;GitHub进入官网注册帐号</li>
+<li>按下图分别输入用户名、邮箱、密码，然后点击注册</li>
+<li>按默认点击“Finish sign up”</li>
+<li>点击”New repository”，新建一个版本库 </li>
+<li>输入Repository name:yourname.github.io(yourname与你的注册用户名一致,这个就是你博客的域名了)</li>
+<li>到此github帐号申请完成</li>
+<li>启用GitHub Page<br>点击右边的“Setting”菜单进入设置,点击”Launch automatic page generator”<br>点击底部的”Continue to layouts”<br>最后点击”Publish page”,发布github默认生成的一个静态站点</li>
+<li>验证邮箱<br>点击个人设置  </li>
+<li>点击”Send verification Email”发送验证邮件 </li>
+<li>进入你的邮箱，查收验证邮件进行验证 </li>
+</ul>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ul>
+<li>hexo是基于node.js的静态博客，官网也是搭建在GitHub上<br>在电脑上新建一个blog文件夹,该文件夹用于存放你的博客文件,然后右键单击选择“Git Bash”</li>
+<li><p>大家估计都有被“墙”的经历，安装hexo为了避免出现类似情况，我使用淘宝NPM镜像,输入以下命令等待安装完成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用淘宝NPM安装Hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2、$ cnpm install -g hexo-cli</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>与原先的npm完全一样，只是命令改为cnpm,一样等待hexo安装完成<br>出现的WARN可以不用理会<br>继续输入以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3、$ cnpm install hexo --save</div></pre></td></tr></table></figure></p>
+<ul>
+<li>安装完成后，在输入命令，验证是否安装正确<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4、$ hexo -v</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="本地运行hexo"><a href="#本地运行hexo" class="headerlink" title="本地运行hexo"></a>本地运行hexo</h3><ul>
+<li><p>初始化hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ hexo init</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装生成器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2、$ cnpm install</div></pre></td></tr></table></figure>
+</li>
+<li><p>运行hexo,以后要在本地运行博客只要输入该命令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3、$ hexo s -g</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>打开浏览器，输入localhost:4000,就可以在本地看到你的个人博客了</p>
+<ul>
+<li>停止运行<br>按住Ctrl+C键即可停止<h3 id="管理博客"><a href="#管理博客" class="headerlink" title="管理博客"></a>管理博客</h3></li>
+<li>配置信息<br>使用Sublime_Text编辑器或phpstrom等打开blog/_config.yml文件，进行配置<br>deploy:<br>  　　　type: git<br> 　　　 <span style="color:gray">zhangpeng0219改为你的github用户名</span><br> 　　　 repository: <a href="https://github.com/zhangpegn0219/zhangpeng0219.github.io.git" target="_blank" rel="external">https://github.com/zhangpegn0219/zhangpeng0219.github.io.git</a><br> 　　　 branch: master</li>
+<li>写一篇文章<br>输入创建文章命令，生成一个md文件(/blog/source/_posts/)<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ hexo new <span class="string">"hello"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>用编辑器打开hello.md文件,编写完后保存<br>title: hello<br>date: 2015-07-01 22:37:23<br>　categories:<br>  　　日志<br>  　　　　二级目录<br>tags:<br>　　hello<br>摘要:<br>正文:</p>
+<h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3><ul>
+<li>设置git身份信息<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1、$ git config --global user.name <span class="string">"你的用户名"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2、$ git config --global user.email <span class="string">"你的邮箱"</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>安装hexo git插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3、$ cnpm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布更新博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4、$ hexo d -g</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>发布时需要输入github的帐号和密码，输入密码时是看不到自己输入的内容的<br>发布成功后，访问yourname.github.io看下成果</p>
+<hr>
+<p>个人博客网址：<a href="https://zhangpeng0219.github.io/">https://zhangpeng0219.github.io/</a></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://zhangpeng0219.github.io/2017/10/16/blog/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://zhangpeng0219.github.io/2017/10/16/blog/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
